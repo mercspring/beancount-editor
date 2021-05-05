@@ -1,16 +1,24 @@
-{{#each transactions}}
-<div>
-    <input type=text value="{{date}}">
-    <input type=text value="{{description}}">
-    <div>
-        <input type=text value="{{account_one}}">
-        <input type=text value="{{amount_one}}">
-        <input type=text value="{{currency_one}}">
+<div class="wrapper">
+    {{#each transactions}}
+    <div class="transaction">
+        <div class="info">
+            <span class="date">{{date}}</span>
+            <span class="description">{{description}}</span>
+        </div>
+        <div class="account-one">
+            <span class="account">{{account_one}}</span>
+            <span class="amount-currency">
+                <span class="amount">{{amount_one}}</span>
+                <span class="currency">{{currency_one}}</span>
+            </span>
+        </div>
+        <div class="account-two">
+            <span class="account">{{account_two}}</span>
+            <span class="amount-currency">
+                <span class="amount">{{amount_two}}</span>
+                <span class="currency">{{currency_two}}</span>
+            </span>
+        </div>
     </div>
-    <div>
-        <input type=text value="{{account_two}}">
-        <input type=text value="{{amount_two}}">
-        <input type=text value="{{currency_two}}">
-    </div>
+    {{/each}}
 </div>
-{{/each}}
